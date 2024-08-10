@@ -1,5 +1,5 @@
 # Use an official Java runtime as a parent image
-FROM openjdk:17-slim
+FROM openjdk:21-slim
 
 # Copy the files and scripts to the container
 COPY files /data/files
