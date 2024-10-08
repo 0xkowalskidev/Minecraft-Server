@@ -1,4 +1,4 @@
-if nc -z localhost 25565; then
+if nc -z 127.0.0.1 25565; then
     echo "Minecraft server is alive."
     exit 0
 else
