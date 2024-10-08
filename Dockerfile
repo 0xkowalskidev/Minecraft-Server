@@ -1,6 +1,9 @@
 # Use an official Java runtime as a parent image
 FROM openjdk:21-slim
 
+# Install netcat for liveness probe
+RUN apt-get update && apt-get install -y netcat && rm -rf /var/lib/apt/lists/*
+
 # Copy the files and scripts to the container
 COPY files /data/files
 COPY scripts /data/scripts

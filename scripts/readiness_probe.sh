@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOG_FILE="/data/server/logs/latest.log"
-READY_MESSAGE="[Server thread/INFO]: Done"
+READY_MESSAGE="Done"
 
 if grep -q "$READY_MESSAGE" "$LOG_FILE"; then
     echo "Server is ready."
