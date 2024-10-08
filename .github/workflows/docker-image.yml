@@ -26,8 +26,8 @@ jobs:
         password: ${{secrets.GITHUB_TOKEN}}
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ghcr.io/0xkowalski1/minecraft-server:latest
+      run: docker build . --file Dockerfile --tag ghcr.io/0xkowalskidev/minecraft-server:latest
 
     - name: Push the Docker image to GitHub Container Registry
-      run: docker push ghcr.io/0xkowalski1/minecraft-server:latest
+      run: docker push ghcr.io/0xkowalskidev/minecraft-server:latest
 
