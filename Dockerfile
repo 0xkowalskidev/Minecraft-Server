@@ -10,6 +10,9 @@ RUN apt-get update && \
 COPY files /data/files
 COPY scripts /data/scripts
 
+# Make all scripts executable
+RUN chmod -R +x /data/scripts
+
 # Set the working directory in the container
 WORKDIR /data/server
 
