@@ -6,5 +6,7 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
+PIPE_PATH="/tmp/command-fifo"
+
 echo "$1" > "$PIPE_PATH"
 
