@@ -12,6 +12,7 @@ fi
 # Convert the JAVA_MEM environment variable from GB to MB
 MEMORY_MB=$((MEMORY * 1024))
 
+export PIPE_PATH="/tmp/command-fifo"
 mkfifo $PIPE_PATH
 
 # Start a loop to read from the named pipe continuously

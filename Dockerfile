@@ -22,7 +22,6 @@ EXPOSE 25565
 # Set ENV variables
 # Memory, in GB, default is 1GB
 ENV MEMORY=1
-ENV PIPE_PATH="/tmp/command-fifo"
 
 # Run the Minecraft server
 CMD ["sh", "/data/scripts/start.sh"]
