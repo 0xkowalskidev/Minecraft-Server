@@ -12,7 +12,10 @@ fi
 # Convert the JAVA_MEM environment variable from GB to MB
 MEMORY_MB=$((MEMORY * 1024))
 
-# Run Java with the calculated memory settings
-echo "Starting Minecraft server with ${MEMORY_MB} MB of memory."
-java -Xmx${MEMORY_MB}M -Xms${MEMORY_MB}M -jar /data/server/server.jar nogui
+mkfifo -m 600 $PIPE_PATH
 
+# Start a loop to read from the named pipe continuously
+# and feed it to the server process
+while true; do
+  cat $PIPE_PATH
+done | java -Xmx${MEMORY_MB}M -Xms${MEMORY_MB}M -jar /data/server/server.jar nogui
