@@ -14,5 +14,5 @@ MEMORY_MB=$((MEMORY * 1024))
 
 # Run Java with the calculated memory settings
 echo "Starting Minecraft server with ${MEMORY_MB} MB of memory."
-java -Xmx${MEMORY_MB}M -Xms${MEMORY_MB}M -jar /data/server/server.jar
+java -Xmx${MEMORY_MB}M -Xms${MEMORY_MB}M -jar /data/server/server.jar nogui
 
